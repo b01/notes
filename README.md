@@ -1,1 +1,1 @@
-My Notes taken while reading that can be helpful to review from time-to-time.
+My Notes taken while reading, that can be helpful to review from time-to-time.
