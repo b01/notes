@@ -39,10 +39,7 @@ replace this with a *.sh script.
 
 ```dockerfile
 
-# This endpoint checks the User ID, LDAP connection, and database connection. It's a nice healthcheck.
-HEALTHCHECK \
-    --interval=30s \
-    --timeout=10s \
-    --retries=3 \
-    --start-period=10s CMD [ "CMD", "curl", "-k", "-f", "https://nginx:4433/status.php" ]
+# This endpoint can do checks like test it can the database, which would a nice healthcheck.
+# Any script or cammdn will work as long as it exit code is 0 or any small int.
+HEALTHCHECK --interval=15m --timeout=3s --start-period=20s CMD curl -kfI http://example.com/status.php || exit 1
 ```
